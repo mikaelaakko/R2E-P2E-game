@@ -1,0 +1,19 @@
+dependencies:
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+  - openzeppelin/openzeppelin-contracts@4.4.2
+compiler:
+  solc:
+    optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1'
+      - '@openzeppelin=openzeppelin/openzeppelin-contracts@4.4.2'
+autofetch_sources: True
+dotenv: .env
+networks:
+  default: development
+wallets:
+  from_key: ${PRIVATE_KEY}
+  from_mnemonic: ${MNEMONIC} 
